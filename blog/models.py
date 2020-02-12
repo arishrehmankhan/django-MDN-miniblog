@@ -8,12 +8,13 @@ class Blog(models.Model):
     content = models.TextField(max_length=2000, help_text='Content of your blog')
     pub_date_time = models.DateTimeField()
     author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
+    # comment = models.ForeignKey('Comment', on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('blog', args=[str(self.id)])
+        return reverse('blog-detail', args=[str(self.id)])
 
 class Author(models.Model):
     first_name = models.CharField(max_length=100)

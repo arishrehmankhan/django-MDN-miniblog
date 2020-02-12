@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block content %}
+<h1>Blog Home</h1>
+<p>Welcome to Mini Blog , a website developed by <em>Arish Rehman Khan</em>!</p>
+<h2>Dynamic content</h2>
+<p>The website has the following counts:</p>
+<ul>
+    <li><strong>Blogs:</strong> {{ num_blogs }}</li>
+    <li><strong>Bloggers:</strong> {{ num_bloggers }}</li>
+</ul>
+<p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+{% endblock %}

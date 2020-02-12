@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block content %}
+<h1>Book List</h1>
+{% if blog_list %}
+<ul>
+    {% for blog in blog_list %}
+    <li>
+        <a href="{{ blog.get_absolute_url }}">{{ blog.title }}</a> ({{blog.pub_date_time}}) ({{blog.author}})
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>There are no books in the library.</p>
+{% endif %} {% if perms.catalog.can_mark_returned %}
+<a href="">Post Blog</a> {% endif %} {% endblock %}
