@@ -33,9 +33,9 @@ git clone https://github.com/arishrehmankhan/django-MDN-miniblog.git
 cd django-MDN-locallibrary
 ```
 
-* Next, install the dependencies using pip:
+* Next, install the django using pip:
 ```
-pip install -r requirements.txt 
+pip install Django
 ```
 * Once the dependencies is installed, migrate your database.
 ```
